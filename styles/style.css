@@ -1,0 +1,71 @@
+/* Improved button styling */
+.calc-btn {
+@apply px-8 py-5 rounded-full border-2 text-3xl font-semibold
+        border-gray-400 dark:border-gray-600 bg-gray-100 dark:bg-gray-700
+        text-gray-900 dark:text-gray-100
+        cursor-pointer
+        transition-colors duration-200 ease-in-out
+        focus:outline-none focus:ring-4 focus:ring-yellow-400 focus:ring-offset-2
+        select-none;
+box-sizing: border-box;
+user-select: none;
+text-align: center;
+min-width: 2.5rem;
+min-height: 2.5rem;
+}
+
+/* Clear button - strong red */
+.calc-btn.bg-red-500 {
+@apply bg-red-600 border-red-600 text-white font-bold;
+}
+.calc-btn.bg-red-500:hover,
+.calc-btn.bg-red-500:focus-visible {
+@apply bg-red-700 border-red-700;
+}
+.calc-btn.bg-red-500:active {
+@apply bg-red-800;
+}
+
+/* Operator buttons - bright yellow */
+.calc-btn.bg-yellow-400 {
+@apply bg-yellow-400 border-yellow-400 text-gray-900 font-bold;
+}
+.calc-btn.bg-yellow-400:hover,
+.calc-btn.bg-yellow-400:focus-visible {
+@apply bg-yellow-500 border-yellow-500;
+}
+.calc-btn.bg-yellow-400:active {
+@apply bg-yellow-600;
+}
+
+/* Equals button - bright yellow with bigger font */
+.calc-btn.bg-emerald-500 {
+@apply bg-yellow-400 border-yellow-500 text-gray-900 font-extrabold;
+font-size: 2.5rem;
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+}
+.calc-btn.bg-emerald-500:hover,
+.calc-btn.bg-emerald-500:focus-visible {
+@apply bg-yellow-500 border-yellow-600;
+}
+.calc-btn.bg-emerald-500:active {
+@apply bg-yellow-600;
+}
+
+/* Zero button spans two columns, maintain rounded-pill */
+.calc-btn.col-span-2 {
+border-radius: 9999px;
+}
+
+/* Responsive font scaling */
+@media (max-width: 480px) {
+.calc-btn {
+@apply text-2xl px-6 py-4 min-w-[3rem] min-h-[3rem];
+}
+.calc-btn.bg-emerald-500 {
+font-size: 2.2rem;
+padding-top: 1rem;
+padding-bottom: 1rem;
+}
+}
